@@ -1,9 +1,6 @@
+FROM ubuntu:18.04
 
-FROM ubuntu:16.10
-MAINTAINER hey@morrisjobke.de
-
-RUN apt-get update
-RUN apt-get install -y apache2 apache2-utils
+RUN apt-get update && apt-get install -y apache2 apache2-utils && apt-get clean
 
 RUN a2enmod dav dav_fs
 RUN a2dissite 000-default
