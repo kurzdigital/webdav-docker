@@ -3,7 +3,6 @@ FROM ubuntu:18.04
 RUN apt-get update && apt-get install -y apache2 apache2-utils && apt-get clean
 
 RUN a2enmod dav dav_fs
-RUN a2dissite 000-default
 
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
